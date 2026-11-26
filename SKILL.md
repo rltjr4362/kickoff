@@ -1,9 +1,13 @@
 ---
 name: kickoff
-description: 새 프로젝트나 기능을 시작하거나 기획, SPEC.md, 에이전트 분담을 요청할 때 사용한다. 브레인스토밍과 그릴링으로 무엇을 만들지 정하고, 사용자 승인 뒤 구현 계획을 작성한다. 두 번째 승인을 받은 뒤 구현을 시작한다. Claude Code와 Codex에서 사용할 수 있다.
+description: 새 프로젝트나 기능을 시작하거나 기획, SPEC.md, 에이전트 분담을 요청할 때 사용한다. 브레인스토밍과 그릴링으로 무엇을 만들지 정하고, 사용자 승인 뒤 구현 계획을 작성한다. 두 번째 승인을 받은 뒤 구현을 시작한다. Claude Code와 Codex에서 사용할 수 있으며 Kickoff 설치 점검도 지원한다.
 ---
 
 # Kickoff: 시작할 때마다 하는 SPEC.md 두 단계
+
+## 설치 점검
+
+`kickoff 설치 점검`을 요청하면 현재 세션에서 사용할 수 있는 `superpowers:brainstorming`과 `anthropic-skills:grilling` 또는 `grilling`을 확인한다. 확인할 수 없는 항목은 확인 필요로 표시한다. 브레인스토밍 스킬을 사용할 수 없으면 [README.md](README.md)에서 해당 환경의 Superpowers 설치 방법을 안내한다. 그릴링 스킬을 사용할 수 없으면 1부에 포함된 그릴링 절차를 사용할 수 있다고 알려준다. Orca 워커를 쓰려는 경우에만 Orca와 `orchestration`을 점검한다. 점검 요청은 결과 안내로 마친다.
 
 ## 원칙
 - 코드보다 SPEC.md가 먼저. SPEC.md를 사용자가 승인하기 전엔 구현 파일을 만들지 않는다.
